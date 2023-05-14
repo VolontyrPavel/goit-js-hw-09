@@ -40,5 +40,3 @@ function createPromise(position, delay) {
     }
   }, delay);
 }
-
-//.currentTarget.value
