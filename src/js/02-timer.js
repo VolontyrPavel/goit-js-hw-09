@@ -3,6 +3,8 @@ import "flatpickr/dist/flatpickr.min.css";
 
 import Notiflix from 'notiflix';
 
+let timerId = null;
+
 const refs = {
     input: document.querySelector('input'),
     start: document.querySelector('[data-start]'),
@@ -26,7 +28,6 @@ const options = {
             Notiflix.Notify.failure('Please choose a date in the future');
         } else {
             refs.start.removeAttribute('disabled');
-            console.log(Date.parse(selectedDates[0]));
             newDate += Date.parse(selectedDates[0]);
             return newDate;
         }

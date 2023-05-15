@@ -21,7 +21,7 @@ function onSubmit(e) {
 }
 
 function onDoIt(firstDelay, delayStep, amount) {
-  let position = 0;
+  let position = 1;
   let delay = firstDelay;
   for (let i = 1; i <= amount; i += 1) {
     createPromise(position, delay);
